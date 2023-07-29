@@ -1,0 +1,4 @@
+SELECT name,amount_of_students
+FROM course
+WHERE 27<amount_of_students AND amount_of_students<310
+ORDER BY name,amount_of_students;
