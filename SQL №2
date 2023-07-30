@@ -1,0 +1,5 @@
+SELECT name,'курс' as "object_type"
+FROM course
+UNION SELECT name,'университет' as "object_type"
+FROM college
+ORDER BY object_type DESC ,name ASC;
