@@ -1,0 +1,5 @@
+SELECT name, amount_of_students
+FROM course
+ORDER By amount_of_students = 300 desc,
+         case when amount_of_students = 300 THEN  amount_of_students end ,
+         case when amount_of_students != 300 THEN  amount_of_students end limit 3;
