@@ -1,0 +1,18 @@
+SELECT cast((SELECT COUNT(id)
+FROM
+(
+    select  id
+    from course
+    INTERSECT
+    select  id
+    from student_on_course
+) A) as real)/(
+SELECT COUNT(id)
+FROM
+(
+    select id
+    from course
+    union
+   select id
+   from student_on_course
+)B) as val;
