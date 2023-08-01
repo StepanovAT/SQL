@@ -1,0 +1,13 @@
+INSERT INTO student_on_course_kn
+
+(id, student_id, course_id, student_rating, finished_date)
+
+SELECT id, student_id, course_id, CASE WHEN (0<student_rating and student_rating<60) THEN  student_rating-5
+WHEN (61<student_rating and student_rating<80) THEN  student_rating-10
+WHEN (81<student_rating and student_rating<90) THEN  student_rating-15
+ELSE student_rating-20 end , finished_date
+
+FROM student_on_course
+
+WHERE id in (SELECT id from student where city = 'Москва');
+SELECT * FROM student_on_course_kn ORDER BY id;
