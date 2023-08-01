@@ -1,0 +1,3 @@
+CREATE  table student_on_course_kn AS
+SELECT k.* FROM student_on_course k where id in (SELECT id from student where city = 'Казань' or city = 'Новосибирск');
+SELECT * from student_on_course_kn;
