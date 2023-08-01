@@ -1,0 +1,4 @@
+SELECT n.name as student_name, kn.student_rating, co.name as student_college_name,  cu.name as course_name,cc.name as course_college_name
+from student n,student_on_course_kn kn, college co, course cu,college cc
+WHERE  kn.course_id = cu.id and kn.student_id = n.id and n.id = co.id and cc.id = cu.id
+order by n.name, cu.name;
