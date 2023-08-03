@@ -1,0 +1,3 @@
+SELECT st.name as student_name, cu.name as course_date from student st, course cu
+where st.id = cu.id
+order by st.name;
