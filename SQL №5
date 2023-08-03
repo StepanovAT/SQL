@@ -1,0 +1,1 @@
+select city, count(city) as city_count from student group by city  HAVING count(city)=2 order by city;
